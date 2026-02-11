@@ -1,0 +1,3 @@
+<div class="snackbar-container" *ngIf="(snackbar.messages | async) as msg">
+  <div class="snackbar" role="status" aria-live="polite">{{ msg }}</div>
+</div>

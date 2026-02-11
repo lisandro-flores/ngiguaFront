@@ -1,0 +1,35 @@
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Compact card tweaks */
+:host ::ng-deep .h-36 {
+  min-height: 9rem;
+}
+
+:host ::ng-deep .compact-term {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
+}
+
+/* Make cards focusable/clickable */
+:host ::ng-deep [role="button"] { cursor: pointer; }
+
+/* Modal styles */
+.modal-backdrop { background: rgba(0,0,0,0.6); }
+.modal-panel { max-height: 90vh; animation: modal-pop 180ms ease-out; }
+
+@keyframes modal-pop {
+  0% { transform: translateY(10px) scale(0.98); opacity: 0.6; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}

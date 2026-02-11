@@ -1,0 +1,2 @@
+.snackbar-container { position: fixed; right: 20px; bottom: 20px; z-index: 60; }
+.snackbar { background: rgba(17,24,39,0.95); color: #fff; padding: 10px 14px; border-radius: 8px; box-shadow: 0 8px 24px rgba(2,6,23,0.6); font-weight: 600; }

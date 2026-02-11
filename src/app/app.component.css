@@ -1,0 +1,34 @@
+/* Suggestions toolbar styles */
+.suggestions-toolbar {
+  background: linear-gradient(180deg, rgba(12,18,30,0.85), rgba(10,14,22,0.85));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.7);
+}
+
+.suggestion-btn {
+  transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+}
+.suggestion-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(2,6,23,0.45); }
+.suggestion-btn:active { transform: translateY(0); box-shadow: none; }
+
+/* Make segmented control buttons more visible */
+.suggestions-toolbar button[aria-pressed="true"] {
+  box-shadow: 0 8px 26px rgba(3,105,161,0.35);
+}
+
+/* Discover refresh animation */
+.refreshing {
+  animation: discover-fade 420ms ease-in-out;
+}
+
+@keyframes discover-fade {
+  0% { opacity: 0.2; transform: translateY(-6px); }
+  60% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Increase hit area for mobile */
+@media (max-width: 640px) {
+  .suggestion-btn { min-width: 5.2rem; padding-left: 1rem; padding-right: 1rem; }
+}

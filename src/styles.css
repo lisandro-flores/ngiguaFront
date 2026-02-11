@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 antialiased;
+	}
+
+	::selection {
+		@apply bg-ngigua-200 text-ngigua-900;
+	}
+
+	:focus-visible {
+		outline: 2px solid theme('colors.ngigua.400');
+		outline-offset: 2px;
+	}
+}
+
+@layer components {
+	.skip-link {
+		@apply sr-only focus:not-sr-only fixed top-3 left-3 z-[9999] bg-white text-slate-900 px-4 py-2 rounded-lg shadow-lg border border-slate-200;
+	}
+}
+
+@layer utilities {
+	.fade-in {
+		animation: fade-in 180ms ease-out;
+	}
+}
+
+@keyframes fade-in {
+	from { opacity: 0; transform: translateY(4px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+

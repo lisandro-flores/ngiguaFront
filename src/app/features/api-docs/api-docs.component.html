@@ -1,0 +1,54 @@
+<div class="min-h-screen bg-slate-50 dark:bg-slate-900 font-sans text-slate-900 dark:text-slate-100 p-8">
+  <div class="max-w-4xl mx-auto">
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl font-bold mb-4">Documentación de la API <span class="text-ngigua-500">Tha</span></h1>
+      <p class="text-lg text-slate-600 dark:text-slate-400">
+        Integra el diccionario Tha en tus propias aplicaciones y proyectos.
+      </p>
+      <div class="mt-6">
+        <a href="/" class="text-ngigua-600 hover:underline">← Volver al Diccionario</a>
+      </div>
+    </header>
+
+    <div class="space-y-12">
+      <section *ngFor="let endpoint of endpoints" class="bg-white dark:bg-slate-800 rounded-none shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
+        <div class="p-6 border-b border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
+          <div class="flex items-center gap-4">
+            <span class="endpoint-badge get-badge">{{ endpoint.method }}</span>
+            <code class="text-lg font-mono text-slate-700 dark:text-slate-300">{{ endpoint.path }}</code>
+          </div>
+          <p class="mt-4 text-slate-600 dark:text-slate-400">{{ endpoint.description }}</p>
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4" *ngIf="endpoint.params.length">Parámetros</h3>
+          <ul class="space-y-2 mb-8" *ngIf="endpoint.params.length">
+            <li *ngFor="let param of endpoint.params" class="flex items-start gap-4 text-sm">
+              <code class="font-bold text-slate-700 dark:text-slate-200 w-24">{{ param.name }}</code>
+              <code class="text-xs text-slate-500 bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded">{{ param.type }}</code>
+              <span class="text-slate-600 dark:text-slate-400 flex-1">
+                {{ param.description }}
+                <span *ngIf="param.required" class="text-red-500 text-xs ml-2 font-bold">(Requerido)</span>
+              </span>
+            </li>
+          </ul>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Ejemplo de Solicitud</h3>
+              <pre class="text-sm bg-slate-900 text-slate-100 rounded-xl p-4 overflow-auto border border-slate-800">GET {{ baseUrl }}{{ endpoint.exampleRequest }}</pre>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Respuesta (JSON)</h3>
+              <pre class="text-xs bg-slate-900 text-slate-100 rounded-xl p-4 overflow-auto border border-slate-800">{{ endpoint.exampleResponse }}</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="mt-20 text-center text-slate-500 text-sm">
+      <p>Esta es una API pública y gratuita. Por favor úsala con responsabilidad.</p>
+    </footer>
+  </div>
+</div>
