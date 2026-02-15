@@ -1,4 +1,10 @@
-/* CSS from abstracting the card */
-.compact-term {
-    /* Additional specific styles for compact mode if needed beyond Tailwind classes */
+:host {
+    display: block;
+    break-inside: avoid;
+    margin-bottom: 2rem;
+}
+
+/* Ensure inner content respects height */
+:host > div {
+    height: 100%;
 }

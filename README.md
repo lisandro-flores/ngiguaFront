@@ -1,59 +1,67 @@
-# NgiguaFrontend
+# Tha — Diccionario Digital Ngigua
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+> **Preservando la lengua Ngigua a través de tecnología web moderna.**
 
-## Development server
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Angular](https://img.shields.io/badge/Angular-19-dd0031?logo=angular)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwindcss)
+![License](https://img.shields.io/badge/License-CC_BY_NC_SA_4.0-lightgrey)
 
-To start a local development server, run:
+**Tha** ("Voz" en Ngigua) es una plataforma progresiva (PWA) diseñada para documentar, preservar y revitalizar la lengua Ngigua de San Marcos Tlacoyalco, Puebla. Este proyecto combina rigor lingüístico con una experiencia de usuario accesible y performante.
+
+## 🚀 Características Principales
+
+### Para la Comunidad
+*   **Diccionario Vivo**: Búsqueda inteligente de vocablos, definiciones y ejemplos de uso.
+*   **Estudio de Grabación**: Herramienta integrada para capturar pronunciaciones nativas directamente desde el navegador.
+*   **Modo Offline (PWA)**: Funcionalidad completa incluso sin conexión a internet, crucial para zonas rurales.
+*   **Temas**: Soporte nativo para modo claro y oscuro.
+
+### Arquitectura Técnica
+Este proyecto demuestra el uso de las últimas características de **Angular 19**:
+*   **Signals**: Gestión de estado reactiva y granular para un rendimiento óptimo.
+*   **Standalone Components**: Arquitectura modular sin NgModules.
+*   **SSR / Hydration**: Renderizado híbrido para mejorar el SEO y el First Contentful Paint.
+*   **Optimized Build**: Configuración avanzada de esbuild para bundles mínimos.
+
+## 🛠️ Stack Tecnológico
+
+**Frontend:**
+*   **Framework**: Angular 19
+*   **Estilos**: TailwindCSS (Utility-first architecture)
+*   **Iconos**: SVG optimizados inline
+
+**Backend (API):**
+*   **Framework**: NestJS
+*   **Base de Datos**: MongoDB (NoSQL para flexibilidad de esquemas lingüísticos)
+
+## 📦 Instalación y Desarrollo
+
+Para ejecutar este proyecto localmente:
 
 ```bash
+# 1. Clonar el repositorio
+git clone https://github.com/lisandro-flores/ngigua-app.git
+
+# 2. Instalar dependencias
+cd ngigua-frontend
+npm install
+
+# 3. Iniciar servidor de desarrollo
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Visita `http://localhost:4200` en tu navegador.
 
-## Code scaffolding
+## 🤝 Contribución y Licencia
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Este proyecto es una iniciativa de código abierto bajo la licencia **CC BY-NC-SA 4.0**.
+Las contribuciones culturales son revisadas por hablantes nativos de la comunidad.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Desarrollado por
+**Lisandro Flores** — *Full Stack Developer*
+[GitHub](https://github.com/lisandro-flores) | [Email](mailto:contact@lisandro.dev)
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> *Tecnología con propósito social.*
